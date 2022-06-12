@@ -33,9 +33,9 @@ class Instances(SearchDataSheet):
 dadosAbas = "dadosAbas.json"
 planilha = "planilha.json"
 
-startYear = 2011
-endYear = 2012
-nameSheet = "Educação Básica 1.1"
+startYear = 2013
+endYear = 2014
+nameSheet = "Pré-Escola 1.10"
 fileJson = dadosAbas
 
 
@@ -47,19 +47,19 @@ starter.validating()
 
 """
 [
-    "Educação Básica 1.1",
+    "Educação Básica 1.1", OK
     "1.2",
     "1.3",
     "1.4",
     "Educação Infantil 1.5",
-    "Creche 1.6",
-    "1.7",
-    "1.8",
-    "1.9",
-    "Pré-Escola 1.10",
-    "1.11",
-    "1.12",
-    "1.13",
+    "Creche 1.6", OK
+    "1.7",OK
+    "1.8", OK
+    "1.9", OK
+    "Pré-Escola 1.10", OK
+    "1.11", OK
+    "1.12",  OK
+    "1.13", OK
     "Ensino Fundamental 1.14",
     "Anos Iniciais 1.15",
     "1.16",

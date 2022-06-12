@@ -1,0 +1,24 @@
+{
+    "visaoGeralMatriculas": {
+        "sheetName": [
+            "Educação Básica 1.1",
+            "1.2",
+            "1.3",
+            "1.4"
+        ],
+        "visaoGeralDocentes": {
+            "sheetName": [
+                "Educação Básica 2.1",
+                "2.2",
+                "2.3",
+                "2.4",
+                "2.5"
+            ],
+        "planilha": [
+            "Etapa de Ensino",
+            "Localização e Dependência Administrativa",
+            "Sexo e Cor / Raça",
+            "Faixa Etária"
+        ]
+    }
+}

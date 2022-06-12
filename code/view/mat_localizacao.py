@@ -1,16 +1,16 @@
 class Urbana:
     def __init__(self) -> None:
         pass
-
+        
     def funcUrbanaFederal(self, dado):
         return [
             dado["Ano"],
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Urb"],
-            "Federal",
-            format(dado["Urb_Federal"]).replace(".", ","),
+            dado["LocalizacaoUrb"],
+            dado["DepAdm1"],
+            format(dado["UrbFederal"]).replace(".", ","),
         ]
 
     def funcUrbanaEstadual(self, dado):
@@ -19,9 +19,9 @@ class Urbana:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Urb"],
-            "Estadual",
-            format(dado["Urb_Estadual"]).replace(".", ","),
+            dado["LocalizacaoUrb"],
+            dado["DepAdm2"],
+            format(dado["UrbEstadual"]).replace(".", ","),
         ]
 
     def funcUrbanaMunicipal(self, dado):
@@ -30,9 +30,9 @@ class Urbana:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Urb"],
-            "Municipal",
-            format(dado["Urb_Municipal"]).replace(".", ","),
+            dado["LocalizacaoUrb"],
+            dado["DepAdm3"],
+            format(dado["UrbMunicipal"]).replace(".", ","),
         ]
 
     def funcUrbanaPrivada(self, dado):
@@ -41,9 +41,9 @@ class Urbana:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Urb"],
-            "Privada",
-            format(dado["Urb_Privada"]).replace(".", ","),
+            dado["LocalizacaoUrb"],
+            dado["DepAdm4"],
+            format(dado["UrbPrivada"]).replace(".", ","),
         ]
 
 
@@ -57,9 +57,9 @@ class Rural:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Rural"],
-            "Federal",
-            format(dado["Rural_Federal"]).replace(".", ","),
+            dado["LocalizacaoRural"],
+            dado["DepAdm1"],
+            format(dado["RuralFederal"]).replace(".", ","),
         ]
 
     def funcRuralEstadual(self, dado):
@@ -68,9 +68,9 @@ class Rural:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Rural"],
-            "Estadual",
-            format(dado["Rural_Estadual"]).replace(".", ","),
+            dado["LocalizacaoRural"],
+            dado["DepAdm2"],
+            format(dado["RuralEstadual"]).replace(".", ","),
         ]
 
     def funcRuralMunicipal(self, dado):
@@ -79,9 +79,9 @@ class Rural:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Rural"],
-            "Municipal",
-            format(dado["Rural_Municipal"]).replace(".", ","),
+            dado["LocalizacaoRural"],
+            dado["DepAdm3"],
+            format(dado["RuralMunicipal"]).replace(".", ","),
         ]
 
     def funcRuralPrivada(self, dado):
@@ -90,7 +90,7 @@ class Rural:
             dado["CodigoMunicipio"],
             dado["TipoEnsinoGrupo"],
             dado["NivelTipoEnsino"],
-            dado["Localizacao_Rural"],
-            "Privada",
-            format(dado["Rural_Privada"]).replace(".", ","),
+            dado["LocalizacaoRural"],
+            dado["DepAdm4"],
+            format(dado["RuralPrivada"]).replace(".", ","),
         ]

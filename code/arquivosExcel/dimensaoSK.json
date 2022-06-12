@@ -1,0 +1,16 @@
+{
+    "etapaEnsino": {
+        "Educação Infantil": {
+            "": {
+                "Creche": 1,
+                "Pré-Escola": 2
+            }
+        },
+        "Ensino Fundamental": {
+            "2": {
+                "Anos Iniciais": 1,
+                "Anos Finais": 2
+            }
+        }
+    }
+}

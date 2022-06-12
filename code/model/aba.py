@@ -1,14 +1,16 @@
+
+
 class Aba:
     def __init__(self, dataSheet) -> None:
 
         self.obj = dataSheet
-        self.sheetName = self.obj["sheetName"]
-        self.tipoEnsinoGrupo = self.obj["tipoEnsinoGrupo"]
-        self.nivelTipoEnsino = self.obj["nivelTipoEnsino"]
-        self.index = self.obj["index"]
-        self.skiprows = self.obj["skiprows"]
-        self.usecols = self.obj["usecols"]
-        self.bodyNameFile = self.obj["bodyNameFile"]
-        self.nameColumns = self.obj["nameColumns"]
-        self.newColumns = self.obj["newColumns"]
-        self.header = self.obj["header"]
+        self.sheetName = self.obj["SheetName"]
+        self.tipoEnsinoGrupo = self.obj["TipoEnsinoGrupo"]
+        self.nivelTipoEnsino = self.obj["NivelTipoEnsino"]
+        self.index = self.obj["Index"]
+        self.skiprows = self.obj["Skiprows"]
+        self.usecols = self.obj["Usecols"]
+        self.bodyNameFile = self.obj["BodyNameFile"]
+        self.nameColumns = self.obj["NameColumns"]
+        self.newColumns = self.obj["NewColumns"]
+        self.header = self.obj["Header"]

@@ -11,11 +11,11 @@ class SearchDataSheet:
         self.nameSheet = nameSheet
         self.nameFileJason = nameFileJason 
         
-        for file in os.listdir("./codigo_supai_refatorado/arquivosExcel"):
+        for file in os.listdir("./code/arquivosExcel"):
             if file.endswith(self.nameFileJason):
                 with open(
                     os.path.join(
-                        os.path.realpath("./codigo_supai_refatorado/arquivosExcel/"),
+                        os.path.realpath("./code/arquivosExcel/"),
                         file,
                     ),
                     encoding="utf-8",

@@ -1,14 +1,14 @@
-from .mat_localizacao import Urbana, Rural
-from .sexoEtnia import Feminina, Masculino
-from .visaoGeral import VisaoGeral
+from view.mat_localizacao import Urbana, Rural
+from view.sexoEtnia import Feminina, Masculino
+from view.tempoIntegralParcial import TempoParcial, TempoIntegral
 
 
-class FunctionsComuns(Urbana, Rural, Feminina, Masculino, VisaoGeral):
+class FunctionsComuns(Urbana, Rural, Feminina, Masculino, TempoParcial, TempoIntegral):
     def __init__(self) -> None:
         super().__init__()
 
-    def funcUrbana(self, dado, newDataFrame ):
-   
+    def funcUrbana(self, dado, newDataFrame):
+
         newDataFrame.append(super().funcUrbanaFederal(dado))
         newDataFrame.append(super().funcUrbanaEstadual(dado))
         newDataFrame.append(super().funcUrbanaMunicipal(dado))
@@ -39,30 +39,14 @@ class FunctionsComuns(Urbana, Rural, Feminina, Masculino, VisaoGeral):
         newDataFrame.append(super().funcMascAmarela(dado))
         newDataFrame.append(super().funcMascIndigena(dado))
 
-    def funcVisaoGeral(self, dado, newDataFrame, index):
-        self.index = index
-        newDataFrame.append(super().funcMatriculaTotal(dado, self.index))
-        newDataFrame.append(super().funcMatriculaCreche(dado, self.index))
-        newDataFrame.append(super().funcMatriculaPreEscola(dado, self.index))
-        newDataFrame.append(super().funcMatriculaAnosIniciais(dado, self.index))
-        newDataFrame.append(super().funcMatriculaAnosFinais(dado, self.index))
-        newDataFrame.append(
-            super().funcMatriculaEnsinoMedioPropedeutico(dado, self.index)
-        )
-        newDataFrame.append(super().funcMatriculaEnsinoMedioNormal(dado, self.index))
-        newDataFrame.append(super().funcMatriculaEnsinoMedioIntegrado(dado, self.index))
-        newDataFrame.append(
-            super().funcMatriculaProfissionalAssociado(dado, self.index)
-        )
-        newDataFrame.append(
-            super().funcMatriculaProfissionalConcomitante(dado, self.index)
-        )
-        newDataFrame.append(
-            super().funcMatriculaProfissionalSubsequente(dado, self.index)
-        )
-        newDataFrame.append(super().funcMatriculaFICConcomitante(dado, self.index))
-        newDataFrame.append(super().funcMatriculaFICIntegrado(dado, self.index))
-        newDataFrame.append(super().funcMatriculaEJAFundamental(dado, self.index))
-        newDataFrame.append(super().funcMatriculaEJAMedio(dado, self.index))
-        newDataFrame.append(super().funcMatriculaEspecialComum(dado, self.index))
-        newDataFrame.append(super().funcMatriculaEspecialExclusiva(dado, self.index))
+    def funcTempoIntegral(self, dado, newDataFrame):
+        newDataFrame.append(super().funcTempoIntegralFederal(dado))
+        newDataFrame.append(super().funcTempoIntegralEstadual(dado))
+        newDataFrame.append(super().funcTempoIntegralMunicipal(dado))
+        newDataFrame.append(super().funcTempoIntegralPrivada(dado))
+
+    def funcTempoParcial(self, dado, newDataFrame):
+        newDataFrame.append(super().funcTempoParcialFederal(dado))
+        newDataFrame.append(super().funcTempoParcialEstadual(dado))
+        newDataFrame.append(super().funcTempoParcialMunicipal(dado))
+        newDataFrame.append(super().funcTempoParcialPrivada(dado))

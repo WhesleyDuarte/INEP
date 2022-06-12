@@ -1,36 +1,37 @@
 {
     "Modelo" : {
-        "sheetName" : "",
-        "tipoEnsinoGrupo" : "",
-        "nivelTipoEnsino" : "",
-        "skiprows" : [],
-        "usecols" : [],
-        "bodyNameFile" : "",
+        "SheetName" : "",
+        "TipoEnsinoGrupo" : "",
+        "NivelTipoEnsino" : "",
+        "Index" :[],
+        "Skiprows" : [],
+        "Usecols" : [],
+        "BodyNameFile" : "",
 
-        "nameColumns" : {
+        "NameColumns" : {
             
         },
 
-        "newColumns" : [
+        "NewColumns" : [
            
         ],
 
-        "header" : [
+        "Header" : [
             
         ]
 
     },
 
-    "Educação Básica 1.1" : {
-        "sheetName" : "Educação Básica 1.1",
-        "tipoEnsinoGrupo" : "",
-        "nivelTipoEnsino" : "",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1,2,3,4,5,6,7,8,9,10,11,12],
-        "usecols" : [0,1,2,3,4,6,7,9,10,12,13,14,17,18,19,21,22,24,25,27,28],
-        "bodyNameFile" : "_fato_visaoGeral_matriculas_",
+   "Educação Básica 1.1" : {
+        "SheetName" : "Educação Básica 1.1",
+        "TipoEnsinoGrupo" : "",
+        "NivelTipoEnsino" : "",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1,2,3,4,5,6,7,8,9,10,11,12],
+        "Usecols" : [0,1,2,3,4,6,7,9,10,12,13,14,17,18,19,21,22,24,25,27,28],
+        "BodyNameFile" : "_fato_visaoGeral_matriculas_",
 
-        "nameColumns" : {
+        "NameColumns" : {
             "Voltar ao Sumário" :"Regiao",
             "Unnamed: 1" : "Estado", 
             "Unnamed: 2": "Municipio", 
@@ -54,11 +55,11 @@
             "Unnamed: 28" : "qtdMatriculasEspecialExclusiva"   
         },
 
-        "newColumns" : [
+        "NewColumns" : [
             [0, "anoSK"]                  
         ],
 
-        "header" : [
+        "Header" : [
             "anoSK", 
             "municipioSK",
             "grupoEnsinoSK",
@@ -67,91 +68,95 @@
 
     },
 
-    "1.6" : {
-        "sheetName" : "Creche 1.6",
-        "tipoEnsinoGrupo" : "Educaçao Infantil",
-        "nivelTipoEnsino" : "Creche",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        "usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
-        "bodyNameFile" : "_Fato_Matriculas_Localizacao_",
+   "Creche 1.6" : {
+        "SheetName" : "Creche 1.6",
+        "TipoEnsinoGrupo" : "Educaçao Infantil",
+        "NivelTipoEnsino" : "Creche",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "Usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
+        "BodyNameFile" : "_Fato_Matriculas_Localizacao_",
 
-        "nameColumns" : {
+        "NameColumns" : {
             "Voltar ao Sumário": "Regiao",
             "Unnamed: 1": "Estado",
             "Unnamed: 2": "Municipio",
             "Unnamed: 3": "CodigoMunicipio",
-            "Unnamed: 6": "Urb_Federal",
-            "Unnamed: 7": "Urb_Estadual",
-            "Unnamed: 8": "Urb_Municipal",
-            "Unnamed: 9": "Urb_Privada",
-            "Unnamed: 11": "Rural_Federal",
-            "Unnamed: 12": "Rural_Estadual",
-            "Unnamed: 13": "Rural_Municipal",
-            "Unnamed: 14": "Rural_Privada"
+            "Unnamed: 6": "UrbFederal",
+            "Unnamed: 7": "UrbEstadual",
+            "Unnamed: 8": "UrbMunicipal",
+            "Unnamed: 9": "UrbPrivada",
+            "Unnamed: 11": "RuralFederal",
+            "Unnamed: 12": "RuralEstadual",
+            "Unnamed: 13": "RuralMunicipal",
+            "Unnamed: 14": "RuralPrivada"
         },
 
-        "newColumns" : [
+        "NewColumns" : [
             [0, "Ano"],
+            [1, "DepAdm1", "Federal"],
+            [2, "DepAdm2", "Estadual"],
+            [3, "DepAdm3", "Municipal"],
+            [4, "DepAdm4", "Privada"],
             [4, "TipoEnsinoGrupo", "Educaçao Infantil"],
             [5, "NivelTipoEnsino", "Creche"],
-            [6, "Localizacao_Urb", "Urbana"],
-            [12, "Localizacao_Rural", "Rural"]
+            [6, "LocalizacaoUrb", "Urbana"],
+            [12, "LocalizacaoRural", "Rural"]
         ],
 
-        "header" : [
+        "Header" : [
             "Ano",
             "CodigoMunicipio",
             "TipoEnsinoGrupo",
-            "nivelTipoEnsino",
+            "NivelTipoEnsino",
             "Localizacao",
             "DepAdministrativa",
             "Matriculas"
         ]
     },
-    
-    
-    "1.7":{
-        "sheetName" : "1.7",
-        "tipoEnsinoGrupo" : "Educaçao Infantil",
-        "nivelTipoEnsino" : "Creche",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        "usecols":[0, 1, 2, 3, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18],
-        "bodyNameFile" : "_Fato_Matriculas_SexoEtnia_",
 
-        "nameColumns" : {
+     
+    "1.7":{
+        "SheetName" : "1.7",
+        "TipoEnsinoGrupo" : "Educaçao Infantil",
+        "NivelTipoEnsino" : "Creche",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "Usecols":[0, 1, 2, 3, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18],
+        "BodyNameFile" : "_Fato_Matriculas_SexoEtnia_",
+
+        "NameColumns" : {
             "Voltar ao Sumário": "Regiao",
             "Unnamed: 1": "Estado",
             "Unnamed: 2": "Municipio",
             "Unnamed: 3": "CodigoMunicipio",
-            "Unnamed: 6": "Fem_Ndeclarado",
-            "Unnamed: 7": "Fem_Branca",
-            "Unnamed: 8": "Fem_Preta",
-            "Unnamed: 9": "Fem_Parda",
-            "Unnamed: 10": "Fem_Amarela",
-            "Unnamed: 11": "Fem_Indigena",
-            "Unnamed: 13": "Masc_Ndeclarado",
-            "Unnamed: 14": "Masc_Branca",
-            "Unnamed: 15": "Masc_Preta",
-            "Unnamed: 16": "Masc_Parda",
-            "Unnamed: 17": "Masc_Amarela",
-            "Unnamed: 18": "Masc_Indigena"
+            "Unnamed: 6": "FemNdeclarado",
+            "Unnamed: 7": "FemBranca",
+            "Unnamed: 8": "FemPreta",
+            "Unnamed: 9": "FemParda",
+            "Unnamed: 10": "FemAmarela",
+            "Unnamed: 11": "FemIndigena",
+            "Unnamed: 13": "MascNdeclarado",
+            "Unnamed: 14": "MascBranca",
+            "Unnamed: 15": "MascPreta",
+            "Unnamed: 16": "MascParda",
+            "Unnamed: 17": "MascAmarela",
+            "Unnamed: 18": "MascIndigena"
         },
 
-        "newColumns" : [
+        "NewColumns" : [
             [0, "Ano"],
             [4, "TipoEnsinoGrupo", "Educaçao Infantil"],
             [5, "NivelTipoEnsino", "Creche"],
-            [6, "Sexo_Fem", "Feminino"],
-            [12, "Sex_Masc", "Masculino"]
+            [6, "SexoFem", "Feminino"],
+            [12, "SexMasc", "Masculino"]
         ],
 
-        "header" : [
+        "Header" : [
             "Ano",
             "CodigoMunicipio",
             "TipoEnsinoGrupo",
-            "nivelTipoEnsino",
+            "NivelTipoEnsino",
             "Sexo",
             "Etnia",
             "Matriculas"
@@ -160,15 +165,15 @@
     
     
     "1.8" :{ 
-        "sheetName" : "1.8",
-        "tipoEnsinoGrupo" : "Educaçao Infantil",
-        "nivelTipoEnsino" : "Creche",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-        "usecols" : [0, 1, 2, 3, 5, 6, 7],
-        "bodyNameFile" : "_Fato_Matriculas_FaixaEtaria_",
+        "SheetName" : "1.8",
+        "TipoEnsinoGrupo" : "Educaçao Infantil",
+        "NivelTipoEnsino" : "Creche",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "Usecols" : [0, 1, 2, 3, 5, 6, 7],
+        "BodyNameFile" : "_Fato_Matriculas_FaixaEtaria_",
 
-        "nameColumns" : {
+        "NameColumns" : {
             "Voltar ao Sumário": "Regiao",
             "Unnamed: 1": "Estado",
             "Unnamed: 2": "Municipio",
@@ -178,7 +183,7 @@
             "Unnamed: 7": "6 Anos ou mais"
         },
 
-        "newColumns" : [
+        "NewColumns" : [
             [0, "Ano"],
             [5, "TipoEnsinoGrupo", "Educaçao Infantil"],
             [6, "NivelTipoEnsino", "Creche"],
@@ -187,7 +192,7 @@
             [11, "FaixaEtaria3", "6 Anos ou mais"]
         ],
 
-        "header" : [
+        "Header" : [
             "Ano",
             "CodigoMunicipio",
             "TipoEnsinoGrupo",
@@ -199,38 +204,42 @@
 
 
     "1.9":{
-        "sheetName" : "1.9",
-        "tipoEnsinoGrupo" : "Educaçao Infantil",
-        "nivelTipoEnsino" : "Creche",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-        "usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
-        "bodyNameFile" : "_Fato_Matriculas_TempoIntegralParcial_",
+        "SheetName" : "1.9",
+        "TipoEnsinoGrupo" : "Educaçao Infantil",
+        "NivelTipoEnsino" : "Creche",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "Usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
+        "BodyNameFile" : "_Fato_Matriculas_TempoIntegralParcial_",
 
-        "nameColumns" : {
+        "NameColumns" : {
             "Voltar ao Sumário": "Regiao",
             "Unnamed: 1": "Estado",
             "Unnamed: 2": "Municipio",
             "Unnamed: 3": "CodigoMunicipio",
-            "Unnamed: 6": "Integral_Federal",
-            "Unnamed: 7": "Integral_Estadual",
-            "Unnamed: 8": "Integral_Municipal",
-            "Unnamed: 9": "Integral_Privada",
-            "Unnamed: 11": "Parcial_Federal",
-            "Unnamed: 12": "Parcial_Estadual",
-            "Unnamed: 13": "Parcial_Municipal",
-            "Unnamed: 14": "Parcial_Privada"
+            "Unnamed: 6": "IntegralFederal",
+            "Unnamed: 7": "IntegralEstadual",
+            "Unnamed: 8": "IntegralMunicipal",
+            "Unnamed: 9": "IntegralPrivada",
+            "Unnamed: 11": "ParcialFederal",
+            "Unnamed: 12": "ParcialEstadual",
+            "Unnamed: 13": "ParcialMunicipal",
+            "Unnamed: 14": "ParcialPrivada"
         },
 
-        "newColumns" : [
+        "NewColumns" : [
             [0, "Ano"],
+            [1, "DepAdm1", "Federal"],
+            [2, "DepAdm2", "Estadual"],
+            [3, "DepAdm3", "Municipal"],
+            [4, "DepAdm4", "Privada"],
             [5, "TipoEnsinoGrupo", "Educaçao Infantil"],
             [6, "NivelTipoEnsino", "Creche"],
             [7, "TempoIntegral", "Integral"],
             [12, "TempoParcial", "Parcial"]
         ],
 
-        "header" : [
+        "Header" : [
             "Ano",
             "CodigoMunicipio",
             "TipoEnsinoGrupo",
@@ -242,35 +251,39 @@
     },
 
     "Pré-Escola 1.10": {
-        "sheetName" :  "Pré-Escola 1.10",
-        "tipoEnsinoGrupo" :"Educação Infantil",
-        "nivelTipoEnsino" : "Pré-Escola",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        "usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
-        "bodyNameFile": "_Fato_Matriculas_Localizacao_",
-        "nameColumns" : {
+        "SheetName" :  "Pré-Escola 1.10",
+        "TipoEnsinoGrupo" :"Educação Infantil",
+        "NivelTipoEnsino" : "Pré-Escola",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "Usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
+        "BodyNameFile": "_Fato_Matriculas_Localizacao_",
+        "NameColumns" : {
             "Voltar ao Sumário": "Regiao",
             "Unnamed: 1": "Estado",
             "Unnamed: 2": "Municipio",
             "Unnamed: 3": "CodigoMunicipio",
-            "Unnamed: 6": "Urb_Federal",
-            "Unnamed: 7": "Urb_Estadual",
-            "Unnamed: 8": "Urb_Municipal",
-            "Unnamed: 9": "Urb_Privada",
-            "Unnamed: 11": "Rural_Federal",
-            "Unnamed: 12": "Rural_Estadual",
-            "Unnamed: 13": "Rural_Municipal",
-            "Unnamed: 14": "Rural_Privada"
+            "Unnamed: 6": "UrbFederal",
+            "Unnamed: 7": "UrbEstadual",
+            "Unnamed: 8": "UrbMunicipal",
+            "Unnamed: 9": "UrbPrivada",
+            "Unnamed: 11": "RuralFederal",
+            "Unnamed: 12": "RuralEstadual",
+            "Unnamed: 13": "RuralMunicipal",
+            "Unnamed: 14": "RuralPrivada"
         },
-        "newColumns" :[
+        "NewColumns" :[
             [0, "Ano"],
+            [1, "DepAdm1", "Federal"],
+            [2, "DepAdm2", "Estadual"],
+            [3, "DepAdm3", "Municipal"],
+            [4, "DepAdm4", "Privada"],
             [4, "TipoEnsinoGrupo", "Educação Infantil"],
             [5, "NivelTipoEnsino", "Pré-Escola"],
-            [6, "Localizacao_Urb", "Urbana"],
-            [12, "Localizacao_Rural", "Rural"]
+            [6, "LocalizacaoUrb", "Urbana"],
+            [12, "LocalizacaoRural", "Rural"]
         ],
-        "header" : [
+        "Header" : [
             "Ano",
             "CodigoMunicipio",
             "TipoEnsinoGrupo",
@@ -282,46 +295,200 @@
     },
 
     "1.11" : {
-        "sheetName" : "1.11",
-        "tipoEnsinoGrupo" :"Educação Infantil",
-        "nivelTipoEnsino" : "Pré-Escola",
-        "index" : [1, 2, 3, 4, 5, 6],
-        "skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-        "usecols" : [0,1,2,3,6,7,8,9,10,11,13,14, 15,16,17,18],
+        "SheetName" : "1.11",
+        "TipoEnsinoGrupo" :"Educação Infantil",
+        "NivelTipoEnsino" : "Pré-Escola",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        "Usecols" : [0,1,2,3,6,7,8,9,10,11,13,14, 15,16,17,18],
 
-        "bodyNameFile" : "_Fato_Matriculas_Localizacao_",
+        "BodyNameFile" : "_Fato_Matriculas_SexoEtnia_",
 
-        "nameColumns" : {
+        "NameColumns" : {
             "Voltar ao Sumário": "Regiao",
             "Unnamed: 1": "Estado",
             "Unnamed: 2": "Municipio",
             "Unnamed: 3": "CodigoMunicipio",
-            "Unnamed: 6": "Urb_Federal",
-            "Unnamed: 7": "Urb_Estadual",
-            "Unnamed: 8": "Urb_Municipal",
-            "Unnamed: 9": "Urb_Privada",
-            "Unnamed: 11": "Rural_Federal",
-            "Unnamed: 12": "Rural_Estadual",
-            "Unnamed: 13": "Rural_Municipal",
-            "Unnamed: 14": "Rural_Privada"
+            "Unnamed: 6": "FemNdeclarado",
+            "Unnamed: 7": "FemBranca",
+            "Unnamed: 8": "FemPreta",
+            "Unnamed: 9": "FemParda",
+            "Unnamed: 10": "FemAmarela",
+            "Unnamed: 11": "FemIndigena",
+            "Unnamed: 13": "MascNdeclarado",
+            "Unnamed: 14": "MascBranca",
+            "Unnamed: 15": "MascPreta",
+            "Unnamed: 16": "MascParda",
+            "Unnamed: 17": "MascAmarela",
+            "Unnamed: 18": "MascIndigena"
         },
 
-        "newColumns" : [
+        "NewColumns" : [
             [0, "Ano"],
-            [4, "TipoEnsinoGrupo", "Educação Infantil"],
-            [5, "NivelTipoEnsino", "Pré-Escola"],
-            [6, "Localizacao_Urb", "Urbana"],
-            [12, "Localizacao_Rural", "Rural"]
+            [4, "TipoEnsinoGrupo", "Educaçao Infantil"],
+            [5, "NivelTipoEnsino", "Creche"],
+            [6, "SexoFem", "Feminino"],
+            [12, "SexMasc", "Masculino"]
         ],
 
-        "header" : [
+        "Header" : [
             "Ano",
             "CodigoMunicipio",
             "TipoEnsinoGrupo",
             "NivelTipoEnsino",
-            "Localizacao",
+            "Sexo",
+            "Etnia",
+            "Matriculas"
+        ]
+    },
+
+    "1.12" :{ 
+        "SheetName" : "1.12",
+        "TipoEnsinoGrupo" : "Educaçao Infantil",
+        "NivelTipoEnsino" : "Pré-Escola",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "Usecols" : [0, 1, 2, 3, 5, 6, 7],
+        "BodyNameFile" : "_Fato_Matriculas_FaixaEtaria_",
+
+        "NameColumns" : {
+            "Voltar ao Sumário": "Regiao",
+            "Unnamed: 1": "Estado",
+            "Unnamed: 2": "Municipio",
+            "Unnamed: 3": "CodigoMunicipio",
+            "Unnamed: 5": "Até 3 Anos",
+            "Unnamed: 6": "4 a 5 Anos",
+            "Unnamed: 7": "6 Anos ou mais"
+        },
+
+        "NewColumns" : [
+            [0, "Ano"],
+            [5, "TipoEnsinoGrupo", "Educaçao Infantil"],
+            [6, "NivelTipoEnsino", "Pré-Escola"],
+            [7, "FaixaEtaria", "Até 3 Anos"],
+            [9, "FaixaEtaria2", "4 a 5 Anos"],
+            [11, "FaixaEtaria3", "6 Anos ou mais"]
+        ],
+
+        "Header" : [
+            "Ano",
+            "CodigoMunicipio",
+            "TipoEnsinoGrupo",
+            "NivelTipoEnsino",
+            "FaixaEtaria",
+            "Matriculas"
+        ]
+    },
+
+    "1.13":{
+        "SheetName" : "1.13",
+        "TipoEnsinoGrupo" : "Educaçao Infantil",
+        "NivelTipoEnsino" : "Pré-Escola",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+        "Usecols" : [0, 1, 2, 3, 6, 7, 8, 9, 11, 12, 13, 14],
+        "BodyNameFile" : "_Fato_Matriculas_TempoIntegralParcial_",
+
+        "NameColumns" : {
+            "Voltar ao Sumário": "Regiao",
+            "Unnamed: 1": "Estado",
+            "Unnamed: 2": "Municipio",
+            "Unnamed: 3": "CodigoMunicipio",
+            "Unnamed: 6": "IntegralFederal",
+            "Unnamed: 7": "IntegralEstadual",
+            "Unnamed: 8": "IntegralMunicipal",
+            "Unnamed: 9": "IntegralPrivada",
+            "Unnamed: 11": "ParcialFederal",
+            "Unnamed: 12": "ParcialEstadual",
+            "Unnamed: 13": "ParcialMunicipal",
+            "Unnamed: 14": "ParcialPrivada"
+        },
+
+        "NewColumns" : [
+            [0, "Ano"],
+            [1, "DepAdm1", "Federal"],
+            [2, "DepAdm2", "Estadual"],
+            [3, "DepAdm3", "Municipal"],
+            [4, "DepAdm4", "Privada"],
+            [5, "TipoEnsinoGrupo", "Educaçao Infantil"],
+            [6, "NivelTipoEnsino", "Pré-Escola"],
+            [7, "TempoIntegral", "Integral"],
+            [12, "TempoParcial", "Parcial"]
+            
+        ],
+
+        "Header" : [
+            "Ano",
+            "CodigoMunicipio",
+            "TipoEnsinoGrupo",
+            "NivelTipoEnsino",
+            "Tempo",
+            "DepAdministrativa",
+            "Matriculas"
+        ]
+    },
+
+    "Anos Iniciais 1.15":{
+        "SheetName" : "Anos Iniciais 1.15",
+        "TipoEnsinoGrupo" : "Ensino Fundamental",
+        "NivelTipoEnsino" : "Anos Iniciais",
+        "Index" : [1, 2, 3, 4, 5, 6],
+        "Skiprows" : [1,2,3,4,5,6,7,8,9,10,11,12],
+        "Usecols" : [0,1,2,3,6,7,8,9,11,12,13,14,16,17,18,19, 21, 22, 23, 24, 26,27,28,29],
+        "BodyNameFile" : "_Fato_Matriculas_AnoDepAdministrativa_",
+
+        "NameColumns" : {
+            "Voltar ao Sumário":"Regiao", 
+            "Unnamed: 1": "Estado", 
+            "Unnamed: 2": "Municipio" ,
+            "Unnamed: 3": "CodigoMunicipio",
+            "Unnamed: 6": "primeiroFederal",
+            "Unnamed: 7": "primeiroEstadual",
+            "Unnamed: 8": "primeiroMunicipal",
+            "Unnamed: 9": "primeiroPrivada",
+            "Unnamed: 11": "segundoFederal",
+            "Unnamed: 12": "segundoEstadual",
+            "Unnamed: 13": "segundoMunicipal",
+            "Unnamed: 14": "segundoPrivada",
+            "Unnamed: 16": "terceiroFederal", 
+            "Unnamed: 17": "terceiroEstadual",
+            "Unnamed: 18": "terceiroMunicipal",
+            "Unnamed: 19": "terceiroPrivada",
+            "Unnamed: 21": "quartoFederal", 
+            "Unnamed: 22": "quartoEstadual",
+            "Unnamed: 23": "quartoMunicipal",
+            "Unnamed: 24": "quartoPrivada",
+            "Unnamed: 26": "quintoFederal" ,
+            "Unnamed: 27": "quintoEstadual",
+            "Unnamed: 28": "quintoMunicipal",
+            "Unnamed: 29": "quintoPrivada" 
+        },
+
+        "NewColumns" : [
+            [0, "Ano"],
+            [5, "TipoEnsinoGrupo", "Ensino Fundamental"],
+            [6, "NivelTipoEnsino", "Anos Iniciais"],
+            [7, "Ano1", "1° Ano"],
+            [12, "Ano2", "2° Ano"],
+            [17, "Ano3", "3° Ano"],
+            [22, "Ano4", "4° Ano"],
+            [27, "Ano5", "5° Ano"],
+            [32, "DepAdm1", "Federal"],
+            [33, "DepAdm2", "Estadual"],
+            [34, "DepAdm3", "Municipal"],
+            [35, "DepAdm4", "Privada"]
+        ],
+
+        "Header" : [
+            "Ano",
+            "CodigoMunicipio",
+            "TipoEnsinoGrupo",
+            "NivelTipoEnsino",
+            "AnoSerie",
             "DepAdministrativa",
             "Matriculas"
         ]
     }
+
+
 }

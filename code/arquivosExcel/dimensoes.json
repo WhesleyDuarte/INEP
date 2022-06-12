@@ -1,0 +1,49 @@
+{
+    "index": [
+        1,
+        2,
+        3,
+        4,
+        5
+    ],
+    "etapaEnsino": {
+        "Educação Infantil": {
+            "1": {
+                "Creche": 1,
+                "Pré-Escola": 2
+            }
+        }
+    },
+    "Ensino Fundamental": 2,
+    "Ensino Médio": 3,
+    "Educação Profissional": 4,
+    "Educação de Jovens e Adultos - EJA": 5,
+    "Educação Especial": 6
+},
+"etapaEnsino2": [
+    "Educação Infantil",
+    "Ensino Fundamental",
+    "Ensino Médio",
+    "Educação Profissional",
+    "Educação de Jovens e Adultos - EJA",
+    "Educação Especial"
+],
+"nivelEnsino": [
+    "Creche",
+    "Pré-Escola",
+    "Anos Iniciais",
+    "Anos Finais",
+    "Ensino Médio Propedêutico",
+    "Ensino Médio Normal/Magistério",
+    "Curso Técnico Integrado (Ensino Médio Integrado)",
+    "Associada ao Ensino Médio",
+    "Curso Técnico Concomitante",
+    "Curso Técnico Subsequente",
+    "Curso FIC Concomitante",
+    "Curso FIC Integrado na Modalidade EJA",
+    "Ensino Fundamental",
+    "Ensino Médio",
+    "Classes Comuns",
+    "Classes Exclusivas"
+]
+}

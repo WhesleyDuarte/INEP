@@ -36,3 +36,4 @@ class Start(ETL, ReaderFile, FileGenerator):
                 self.obj.newColumns,
             )
             super().generate(obj=self.obj, frame=frame, year=year)
+            self.obj.newColumns[0].remove(year)
