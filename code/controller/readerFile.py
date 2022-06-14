@@ -9,10 +9,10 @@ class ReaderFile:
     def searchFile(self, nameFileSheet):
         self.nameFileSheet = nameFileSheet
 
-        for file in os.listdir("./code/arquivosExcel"):
+        for file in os.listdir("./arquivosExcel"):
             if file.endswith(self.nameFileSheet):
                 return os.path.join(
-                    os.path.realpath("./code/arquivosExcel/"), file
+                    os.path.realpath("./arquivosExcel/"), file
                 )
 
     def read(self, sheetName, skiprows, usecols, nameFileSheet, pathFile):
