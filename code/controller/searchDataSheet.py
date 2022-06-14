@@ -4,18 +4,18 @@ from unicodedata import name
 
 
 class SearchDataSheet:
-    def __init__(self,) -> None:
+    def __init__(self) -> None:
        pass
 
     def searchingNameSheet(self,  nameSheet, nameFileJason):
         self.nameSheet = nameSheet
         self.nameFileJason = nameFileJason 
         
-        for file in os.listdir("./code/arquivosExcel"):
+        for file in os.listdir("./arquivosExcel"):
             if file.endswith(self.nameFileJason):
                 with open(
                     os.path.join(
-                        os.path.realpath("./code/arquivosExcel/"),
+                        os.path.realpath("./arquivosExcel/"),
                         file,
                     ),
                     encoding="utf-8",

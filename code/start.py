@@ -1,4 +1,5 @@
 from ast import Not
+
 from controller.main import Main
 from controller.searchDataSheet import SearchDataSheet
 from model.aba import Aba
@@ -16,15 +17,17 @@ class Instances(SearchDataSheet):
         pass
 
     def validating(self):
+        # TODO: vamos criar a instência de cada tipo de obejto, exemplo abas e notas
 
-        """
-        vamos criar a instência de cada tipo de obejto, exemplo abas e notas
-        """
         if self.fileJson == "planilha.json":
             pass
         else:
             dataSheet = super().searchingNameSheet(self.nameSheet, self.fileJson)
-            objAba = Aba(super().searchingDataSheet(dataSheet))
+            obj = super().searchingDataSheet(dataSheet)
+            objAba = Aba(sheetName=obj["SheetName"], nameColumns=obj["NameColumns"],
+                         tipoEnsinoGrupo=obj["TipoEnsinoGrupo"], nivelTipoEnsino=obj["NivelTipoEnsino"],
+                         index=obj["Index"], skiprows=obj["Skiprows"], newColumns=obj["NewColumns"],
+                         bodyNameFile=obj["BodyNameFile"], usecols=obj["Usecols"], header=obj["Header"])
 
             main = Main()
             main.start(objAba, self.startYear, self.endYear)
@@ -38,12 +41,10 @@ endYear = 2014
 nameSheet = "Pré-Escola 1.10"
 fileJson = dadosAbas
 
-
 starter = Instances(
     nameSheet=nameSheet, startYear=startYear, endYear=endYear, fileJson=fileJson
 )
 starter.validating()
-
 
 """
 [
