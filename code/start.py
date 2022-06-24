@@ -1,8 +1,7 @@
-from ast import Not
-
 from controller.main import Main
 from controller.searchDataSheet import SearchDataSheet
 from model.aba import Aba
+from model.dimensao import Dimension
 
 
 class Instances(SearchDataSheet):
@@ -19,26 +18,35 @@ class Instances(SearchDataSheet):
     def validating(self):
         # TODO: vamos criar a instência de cada tipo de obejto, exemplo abas e notas
 
-        if self.fileJson == "planilha.json":
-            pass
-        else:
+        if self.fileJson == "dadosAbas.json":
+
             dataSheet = super().searchingNameSheet(self.nameSheet, self.fileJson)
             obj = super().searchingDataSheet(dataSheet)
             objAba = Aba(sheetName=obj["SheetName"], nameColumns=obj["NameColumns"],
                          tipoEnsinoGrupo=obj["TipoEnsinoGrupo"], nivelTipoEnsino=obj["NivelTipoEnsino"],
                          index=obj["Index"], skiprows=obj["Skiprows"], newColumns=obj["NewColumns"],
                          bodyNameFile=obj["BodyNameFile"], usecols=obj["Usecols"], header=obj["Header"])
-
             main = Main()
             main.start(objAba, self.startYear, self.endYear)
 
 
+        elif self.fileJson == "dadosDimensao.json":
+            dataSheet = super().searchingNameSheet(self.nameSheet, self.fileJson)
+            obj = super().searchingDataSheet(dataSheet)
+            objDim = Dimension(sheetName=self.nameSheet, dimensao=obj["Dimensao"], header=obj["Header"])
+
+            main = Main()
+            main.startDimesion(obj=objDim)
+
+
 dadosAbas = "dadosAbas.json"
 planilha = "planilha.json"
+dimensao = "dadosDimensao.json"
 
 startYear = 2013
 endYear = 2014
-nameSheet = "Pré-Escola 1.10"
+
+nameSheet = "Educação Básica 1.1"
 fileJson = dadosAbas
 
 starter = Instances(

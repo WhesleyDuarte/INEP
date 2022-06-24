@@ -1,5 +1,5 @@
 import unidecode
-from controller.salveFile import SalveFile
+from .salveFile import SalveFile
 
 
 class NamenateFile:
@@ -35,3 +35,15 @@ class NamenateFile:
                 )
             )
         saveFile.savingFile(fileNameCSV=fileNameCSV, newFrame=self.newFrame)
+
+    def namingFileDimension(self, sheetName, newDimensao):
+        saveFile = SalveFile()
+        self.fileNameCSV = sheetName
+        self.newFrame = newDimensao
+
+        self.fileNameCSV = unidecode.unidecode(
+            f"{self.fileNameCSV}.csv".replace(
+                " ", ""
+            )
+        )
+        saveFile.savingFile(fileNameCSV=self.fileNameCSV, newFrame=newDimensao)

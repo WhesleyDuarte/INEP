@@ -1,0 +1,48 @@
+{
+  "Dim_Sexo": {
+    "Dimensao": [
+      "Feminino",
+      "Masculino"
+    ],
+    "Header": [
+      "SexoSK",
+      "Sexo"
+    ]
+  },
+  "Dim_CorRaca": {
+    "Dimensao": [
+      "Não Declarada",
+      "Branca",
+      "Preta",
+      "Parda",
+      "Amarela",
+      "Indígena"
+    ],
+    "Header": [
+      "RacaSK",
+      "Raca"
+    ]
+  },
+  "Dim_DependenciaAdministrativa": {
+    "Dimensao": [
+      "Federal",
+      "Estadual",
+      "Municipal",
+      "Privada"
+    ],
+    "Header": [
+      "DependenciaAdministrativaSK",
+      "DependenciaAdministrativa"
+    ]
+  },
+  "Dim_Localizacao": {
+    "Dimensao": [
+      "Urbana",
+      "Rural"
+    ],
+    "Header": [
+      "LocalizacaoSK",
+      "Localizacao"
+    ]
+  }
+}
