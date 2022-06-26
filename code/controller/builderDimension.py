@@ -8,8 +8,8 @@ class BuildDimension():
     def buildingDimension(self, obj):
         newDimensao = []
         newDimensao.append(getattr(obj, "header"))
-        count = 0
-        for sk in range(len(getattr(self.obj, "dimensao"))):
-            count = count + 1
-            newDimensao.append([count, getattr(self.obj, "dimensao")[sk]])
+        sk = 0
+        for index in range(len(getattr(self.obj, "dimensao"))):
+            sk = sk + 1
+            newDimensao.append([sk, getattr(self.obj, "dimensao")[index]])
         return newDimensao
