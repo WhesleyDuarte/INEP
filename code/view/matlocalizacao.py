@@ -1,8 +1,9 @@
 class Urbana:
     def __init__(self) -> None:
         pass
-        
+
     def funcUrbanaFederal(self, dado):
+
         return [
             dado["Ano"],
             dado["CodigoMunicipio"],
@@ -10,8 +11,9 @@ class Urbana:
             dado["NivelTipoEnsino"],
             dado["LocalizacaoUrb"],
             dado["DepAdm1"],
-            format(dado["UrbFederal"]).replace(".", ","),
+            format(dado["UrbFederal"]).replace(".", ",")
         ]
+
 
     def funcUrbanaEstadual(self, dado):
         return [

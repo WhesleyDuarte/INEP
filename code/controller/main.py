@@ -9,6 +9,7 @@ class Main(Start):
         self.startYear = startYear
         self.endYear = endYear
         self.obj = obj
+        print(type(self.obj))
         super().starting(obj=self.obj, startYear=self.startYear, endYear=self.endYear)
 
     def startDimesion(self, obj):

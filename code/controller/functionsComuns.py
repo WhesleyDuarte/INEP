@@ -9,6 +9,7 @@ class FunctionsComuns(Urbana, Rural, Feminina, Masculino, TempoParcial, TempoInt
 
     def funcUrbana(self, dado, newDataFrame):
         newDataFrame.append(super().funcUrbanaFederal(dado))
+
         newDataFrame.append(super().funcUrbanaEstadual(dado))
         newDataFrame.append(super().funcUrbanaMunicipal(dado))
         newDataFrame.append(super().funcUrbanaPrivada(dado))

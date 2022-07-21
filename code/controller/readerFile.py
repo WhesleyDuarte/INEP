@@ -15,14 +15,37 @@ class ReaderFile:
                     os.path.realpath("./arquivosExcel/"), file
                 )
 
-    def read(self, sheetName, skiprows, usecols, nameFileSheet, pathFile):
+    def read(self, frame, sheetName, pathFile, nameFileSheet):
 
+        self.frame = frame
         self.sheetName = sheetName
-        self.skiprows = skiprows
-        self.usecols = usecols
-        self.nameFileSheet = nameFileSheet
         self.pathAbsolute = pathFile
+        self.nameFileSheet = nameFileSheet
 
+        '''sheetName,  nameFileSheet, pathFile, skiprows=None, usecols=None, '''
+
+        if "Skiprows" and "Usecols" in self.frame:
+            return pd.read_excel(
+                self.pathAbsolute,
+                sheet_name=self.sheetName,
+                skiprows=self.frame["Skiprows"],
+                usecols=self.frame["Usecols"],
+            )
+        else:
+            return pd.read_excel(
+                self.pathAbsolute,
+                sheet_name=self.sheetName,
+                skiprows=None,
+                usecols=None,
+            )
+
+        '''
+        self.usecols = self.frame["Usecols"]
+        self.sheetName = self.frame["SheetName"]
+
+        self.nameFileSheet = self.frame["NameFileSheet"]
+        self.pathAbsolute = self.frame["PathFile"]
+        '''
         print("Reader File...")
 
         return pd.read_excel(
@@ -31,3 +54,5 @@ class ReaderFile:
             skiprows=self.skiprows,
             usecols=self.usecols,
         )
+
+

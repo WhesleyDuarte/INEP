@@ -22,13 +22,20 @@ class Instances(SearchDataSheet):
 
             dataSheet = super().searchingNameSheet(self.nameSheet, self.fileJson)
             obj = super().searchingDataSheet(dataSheet)
+            print(type(obj))
+
+            '''
             objAba = Aba(sheetName=obj["SheetName"], nameColumns=obj["NameColumns"],
                          tipoEnsinoGrupo=obj["TipoEnsinoGrupo"], nivelTipoEnsino=obj["NivelTipoEnsino"],
                          index=obj["Index"], skiprows=obj["Skiprows"], newColumns=obj["NewColumns"],
-                         bodyNameFile=obj["BodyNameFile"], usecols=obj["Usecols"], header=obj["Header"])
+                          bodyNameFile=obj["BodyNameFile"], usecols=obj["Usecols"], header=obj["Header"])
+            
             main = Main()
             main.start(objAba, self.startYear, self.endYear)
-
+            '''
+            #aba = Aba(obj)
+            main = Main()
+            main.start(obj=obj, startYear=self.startYear,endYear=self.endYear)
 
         elif self.fileJson == "dadosDimensao.json":
             dataSheet = super().searchingNameSheet(self.nameSheet, self.fileJson)
@@ -46,7 +53,7 @@ dimensao = "dadosDimensao.json"
 startYear = 2013
 endYear = 2014
 
-nameSheet = "Educação Básica 1.1"
+nameSheet = "Creche 1.6"
 fileJson = dadosAbas
 
 starter = Instances(

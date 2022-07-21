@@ -16,7 +16,7 @@ class FileGenerator:
         self.frame = frame
         self.year = year
         self.newFrame = []
-        self.newFrame.append(self.obj.header)
+        self.newFrame.append(self.obj["Header"])
 
         namingFile = NamenateFile()
         functionComuns = FunctionsComuns()
@@ -27,58 +27,58 @@ class FileGenerator:
         for index, linha in self.frame.iterrows():
             if linha["Estado"] == "Mato Grosso do Sul " and linha["Municipio"] != "  ":
 
-                if self.obj.sheetName == "Creche 1.6":
+                if self.obj["SheetName"] == "Creche 1.6":
                     functionComuns.funcUrbana(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcRural(dado=linha, newDataFrame=self.newFrame)
 
-                elif self.obj.sheetName == "1.7":
+                elif self.obj["SheetName"] == "1.7":
 
                     functionComuns.funcFeminina(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcMasculina(dado=linha, newDataFrame=self.newFrame)
 
-                elif self.obj.sheetName == "1.8":
+                elif self.obj["SheetName"] == "1.8":
                     educacaoInfantil.funcFaixaEtaria(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "1.9":
+                elif self.obj["SheetName"] == "1.9":
                     functionComuns.funcTempoIntegral(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcTempoParcial(dado=linha, newDataFrame=self.newFrame)
 
-                elif self.obj.sheetName == "Pré-Escola 1.10":
+                elif self.obj["SheetName"] == "Pré-Escola 1.10":
                     functionComuns.funcUrbana(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcRural(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "1.11":
+                elif self.obj["SheetName"] == "1.11":
                     functionComuns.funcFeminina(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcMasculina(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "1.12":
+                elif self.obj["SheetName"] == "1.12":
                     educacaoInfantil.funcFaixaEtaria(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "1.13":
+                elif self.obj["SheetName"] == "1.13":
                     functionComuns.funcTempoIntegral(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcTempoParcial(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "Anos Iniciais 1.15":
+                elif self.obj["SheetName"] == "Anos Iniciais 1.15":
                     ensinoFundamental.funcAnosIniciais(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "1.16":
+                elif self.obj["SheetName"] == "1.16":
                     functionComuns.funcUrbana(dado=linha, newDataFrame=self.newFrame)
                     functionComuns.funcRural(dado=linha, newDataFrame=self.newFrame)
                 
-                elif self.obj.sheetName == "1.18":
+                elif self.obj["SheetName"] == "1.18":
                     ensinoFundamental.funcFaixaEtaria()
                     
             elif linha["Estado"] == "Mato Grosso do Sul " and linha["Municipio"] == "  ":
-                if self.obj.sheetName == "Educação Básica 1.1":
+                if self.obj["SheetName"] == "Educação Básica 1.1":
                     visaoGeral.funcVisaoGeralEducacaoBasica(dado=linha, newDataFrame=self.newFrame, index=self.obj.index)
                 
-                elif self.obj.sheetName == "1.2":
+                elif self.obj["SheetName"] == "1.2":
                     visaoGeral.funcVisaoGeralLocalizacaoDepAdministrativa(dado=linha, newDataFrame=self.newFrame, index=self.obj.index)
-                    
+
         namingFile.namingFile(
             year=self.year,
-            tipoEnsinoGrupo=self.obj.tipoEnsinoGrupo,
-            nivelTipoEnsino=self.obj.nivelTipoEnsino,
-            bodyNameFile=self.obj.bodyNameFile,
+            tipoEnsinoGrupo=self.obj["TipoEnsinoGrupo"],
+            nivelTipoEnsino=self.obj["NivelTipoEnsino"],
+            bodyNameFile=self.obj["BodyNameFile"],
             newFrame=self.newFrame,
         )

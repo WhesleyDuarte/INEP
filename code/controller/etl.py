@@ -26,3 +26,7 @@ class ETL:
             self.frame.insert(
                 loc=item[0], column=item[1], value=item[2], allow_duplicates=False
             )
+    def dropColumns(self, frame):
+        for coluna in frame.columns:
+            if "Unnamed" in str(coluna):
+                frame.pop(coluna)

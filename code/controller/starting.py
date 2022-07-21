@@ -20,23 +20,28 @@ class Start(ETL, ReaderFile, FileGenerator, BuildDimension):
             pathFile = super().searchFile(self.nameFileSheet)
 
             frame = super().read(
-                sheetName=self.obj.sheetName,
-                skiprows=self.obj.skiprows,
-                usecols=self.obj.usecols,
-                nameFileSheet=self.nameFileSheet,
+                frame=self.obj,
+                sheetName=self.obj["SheetName"],
                 pathFile=pathFile,
+                nameFileSheet = self.nameFileSheet
             )
+            """ skiprows=self.obj["Skiprows"],
+                usecols=self.obj["Usecols"],
+                ,
+                ,"""
 
             frame = super().dropna(frame)
 
-            super().renameColumns(frame, self.obj.nameColumns)
-            self.obj.newColumns[0].append(year)
+            super().renameColumns(frame, self.obj["NameColumns"])
+            self.obj["NewColumns"][0].append(year)
             super().insertColumns(
                 frame,
-                self.obj.newColumns,
+                self.obj["NewColumns"],
             )
+            super().dropColumns(frame)
+
             super().generate(obj=self.obj, frame=frame, year=year)
-            self.obj.newColumns[0].remove(year)
+            self.obj["NewColumns"][0].remove(year)
 
     def startingDimension(self, obj):
         self.obj = obj

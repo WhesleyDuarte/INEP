@@ -20,8 +20,9 @@ class SearchDataSheet:
                     ),
                     encoding="utf-8",
                 ) as fileJson:
-                    self.dataAllSheet = json.load(fileJson)
-                    return self.dataAllSheet
+                    #self.dataAllSheet = json.load(fileJson)
+                    #return self.dataAllSheet
+                    return json.load(fileJson)
 
     def searchingDataSheet(self, dataSheet):
         self.dataSheet = dataSheet
